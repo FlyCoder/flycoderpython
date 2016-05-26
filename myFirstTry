@@ -1,0 +1,18 @@
+#!/usr/bin/python
+#This is my first python program.
+#Fibonacci sequence
+#example 1
+print("This is the first example.")
+fibs = [0, 1]
+for i in range(10):
+    fibs.append(fibs[-2] + fibs[-1])
+print(fibs)
+
+#example 2
+print("This is the second example.")
+fibs = [0, 1]
+num = input("How many Fibonacci numers do you want?")
+num = int(num)
+for i in range(num-2):
+    fibs.append(fibs[-2] + fibs[-1])
+print(fibs)
