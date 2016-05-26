@@ -1,0 +1,17 @@
+#!/usr/bin/python
+def binarySearch(sequence, number, lower, upper):
+    if lower == upper:
+        assert number == sequence[upper]
+        return upper
+    else:
+        middle = (lower + upper) // 2
+        if number > sequence[middle]:
+            return binarySearch(sequence, number, middle+1, upper)
+        else:
+            return binarySearch(sequence, number, lower, middle)
+
+seq = [34, 67, 8, 123, 4, 100, 95]
+seq.sort()
+print(seq)
+index = binarySearch(seq, 34, 0, len(seq)-1)
+print(seq[index])
