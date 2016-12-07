@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+import sys
+
+count = 0
+for line in sys.stdin:
+    line = line.replace('\001', '\n')
+    result_lines = line.splitlines(False)
+    count = count + 1
+    print "record index is", count
+    for r in result_lines:
+        if len(r) != 0:
+            print r
+    print '---------------------------'
